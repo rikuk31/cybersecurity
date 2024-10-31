@@ -1,4 +1,7 @@
-# cybersecurity
-Cybersecurity and data privacy
+# Cybersecurity
+Cybersecurity and data privacy course
 
-31.10.2024 Watching recordings and making git repo 2h
+# Logbook
+| Date  | Time consumed | Tasks done |
+| :---: | :---: | :---: |
+| 31.10.2024  | 2h  | Watching starting lecture and tutorial video, making git repo and registering for Cisco course |
