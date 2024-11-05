@@ -8,5 +8,6 @@ Cybersecurity and data privacy course
 | 31.10.2024  | 1h  | Cisco module 1 |
 | 1.11.2024  | 1h  | Cisco module 2 |
 | 1.11.2024  | 1h  | Cisco module 3 |
-|   | 1h  | Cisco module 4 |
-|   | 1h  | Cisco module 5 |
+| 4.11.2024  | 1h  | Cisco module 4 |
+| 4.11.2024  | 1h  | Cisco module 5, final exam and survey |
+| 5.11.2024  | 1h  | Watching portswigger lecture and lab  |
