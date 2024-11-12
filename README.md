@@ -11,3 +11,5 @@ Cybersecurity and data privacy course
 | 4.11.2024  | 1h  | Cisco module 4 |
 | 4.11.2024  | 1h  | Cisco module 5, final exam and survey |
 | 5.11.2024  | 1h  | Watching portswigger lecture and lab  |
+| 5.11.2024  | 2h  | Portswigger sql injection 2 labs |
+| 12.11.2024 | 2h  | Portswigger authentication 2 labs |
