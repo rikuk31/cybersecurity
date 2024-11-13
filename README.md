@@ -17,3 +17,11 @@ Cybersecurity and data privacy course
 | 12.11.2024 | 1h  | Portswigger labs reflection text |
 | 12.11.2024 | 1h  | Portswigger authentication labs |
 | 13.11.2024 | 2h  | Watching booking system phase 1 lectures |
+| 13.11.2024 | 3h  | Making booking system phase 1 and improvements |
+
+
+Booking System Phase 1 improvements:
+app.js:
+Input Validation: Added a helper function to validate the username using a regular expression.
+Prepared Statement: The code now uses a placeholder for username in the query string.
+Parameterized Query: The actual username is passed as a separate argument during query execution, preventing SQL injection vulnerabilities.
