@@ -22,8 +22,8 @@ Cybersecurity and data privacy course
 
 Booking System Phase 1 improvements:<br>
 app.js:<br>
-[Initial test](https://github.com/rikuk31/cybersecurity/blob/main/Registration_page_first_test.md)
-[Second test](https://github.com/rikuk31/cybersecurity/blob/main/Registration_page_second_test.md)
+[Initial test](https://github.com/rikuk31/cybersecurity/blob/main/Registration_page_first_test.md)<br>
+[Second test](https://github.com/rikuk31/cybersecurity/blob/main/Registration_page_second_test.md)<br>
 
 Input Validation: Added a helper function to validate the username using a regular expression.<br>
 Prepared Statement: The code now uses a placeholder for username in the query string.<br>
