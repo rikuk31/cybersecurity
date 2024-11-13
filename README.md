@@ -20,8 +20,8 @@ Cybersecurity and data privacy course
 | 13.11.2024 | 3h  | Making booking system phase 1 and improvements |
 
 
-Booking System Phase 1 improvements:
-app.js:
+Booking System Phase 1 improvements:<br>
+app.js:<br>
 
 
 Input Validation: Added a helper function to validate the username using a regular expression.<br>
