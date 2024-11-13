@@ -16,3 +16,4 @@ Cybersecurity and data privacy course
 | 12.11.2024 | 15min  | Portswigger access control 1 lab |
 | 12.11.2024 | 1h  | Portswigger labs reflection text |
 | 12.11.2024 | 1h  | Portswigger authentication labs |
+| 13.11.2024 | 2h  | Watching booking system phase 1 lectures |
