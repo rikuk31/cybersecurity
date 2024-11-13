@@ -19,8 +19,8 @@ ZAP by [Checkmarx](https://checkmarx.com/).
 
 | Name | Risk Level | Number of Instances |
 | --- | --- | --- |
-| Path Traversal | High | 1 |
-| SQL Injection | High | 1 |
+| Path Traversal | High | 2 |
+| SQL Injection | High | 2 |
 | Content Security Policy (CSP) Header Not Set | Medium | 1 |
 | Missing Anti-clickjacking Header | Medium | 1 |
 | X-Content-Type-Options Header Missing | Low | 2 |
@@ -52,11 +52,17 @@ Even if the web server properly restricts Path Traversal attempts in the URL pat
 * URL: http://192.168.93.128:8000/register
   * Method: `POST`
   * Parameter: `username`
+  * Attack: `/register`
+  * Evidence: ``
+  * Other Info: ``
+* URL: http://192.168.93.128:8000/register
+  * Method: `POST`
+  * Parameter: `username`
   * Attack: `register`
   * Evidence: ``
   * Other Info: ``
 
-Instances: 1
+Instances: 2
 
 ### Solution
 
@@ -116,8 +122,17 @@ SQL injection may be possible.
 The parameter value being modified was NOT stripped from the HTML output for the purposes of the comparison.
 Data was returned for the original parameter.
 The vulnerability was detected by successfully restricting the data originally returned, by manipulating the parameter.`
+* URL: http://192.168.93.128:8000/register
+  * Method: `POST`
+  * Parameter: `username`
+  * Attack: `ZAP OR 1=1 -- `
+  * Evidence: ``
+  * Other Info: `The page results were successfully manipulated using the boolean conditions [ZAP AND 1=1 -- ] and [ZAP OR 1=1 -- ]
+The parameter value being modified was NOT stripped from the HTML output for the purposes of the comparison.
+Data was NOT returned for the original parameter.
+The vulnerability was detected by successfully retrieving more data than originally returned, by manipulating the parameter.`
 
-Instances: 1
+Instances: 2
 
 ### Solution
 
