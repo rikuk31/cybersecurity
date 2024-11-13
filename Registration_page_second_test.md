@@ -7,7 +7,7 @@ ZAP by [Checkmarx](https://checkmarx.com/).
 
 | Risk Level | Number of Alerts |
 | --- | --- |
-| High | 2 |
+| High | 1 |
 | Medium | 2 |
 | Low | 1 |
 | Informational | 1 |
@@ -19,8 +19,7 @@ ZAP by [Checkmarx](https://checkmarx.com/).
 
 | Name | Risk Level | Number of Instances |
 | --- | --- | --- |
-| Path Traversal | High | 2 |
-| SQL Injection | High | 2 |
+| Path Traversal | High | 1 |
 | Content Security Policy (CSP) Header Not Set | Medium | 1 |
 | Missing Anti-clickjacking Header | Medium | 1 |
 | X-Content-Type-Options Header Missing | Low | 2 |
@@ -52,17 +51,11 @@ Even if the web server properly restricts Path Traversal attempts in the URL pat
 * URL: http://192.168.93.128:8000/register
   * Method: `POST`
   * Parameter: `username`
-  * Attack: `/register`
-  * Evidence: ``
-  * Other Info: ``
-* URL: http://192.168.93.128:8000/register
-  * Method: `POST`
-  * Parameter: `username`
   * Attack: `register`
   * Evidence: ``
   * Other Info: ``
 
-Instances: 2
+Instances: 1
 
 ### Solution
 
@@ -100,65 +93,6 @@ This may not be a feasible solution, and it only limits the impact to the operat
 
 
 #### WASC Id: 33
-
-#### Source ID: 1
-
-### [ SQL Injection ](https://www.zaproxy.org/docs/alerts/40018/)
-
-
-
-##### High (Medium)
-
-### Description
-
-SQL injection may be possible.
-
-* URL: http://192.168.93.128:8000/register
-  * Method: `POST`
-  * Parameter: `username`
-  * Attack: `ZAP AND 1=1 -- `
-  * Evidence: ``
-  * Other Info: `The page results were successfully manipulated using the boolean conditions [ZAP AND 1=1 -- ] and [ZAP AND 1=2 -- ]
-The parameter value being modified was NOT stripped from the HTML output for the purposes of the comparison.
-Data was returned for the original parameter.
-The vulnerability was detected by successfully restricting the data originally returned, by manipulating the parameter.`
-* URL: http://192.168.93.128:8000/register
-  * Method: `POST`
-  * Parameter: `username`
-  * Attack: `ZAP OR 1=1 -- `
-  * Evidence: ``
-  * Other Info: `The page results were successfully manipulated using the boolean conditions [ZAP AND 1=1 -- ] and [ZAP OR 1=1 -- ]
-The parameter value being modified was NOT stripped from the HTML output for the purposes of the comparison.
-Data was NOT returned for the original parameter.
-The vulnerability was detected by successfully retrieving more data than originally returned, by manipulating the parameter.`
-
-Instances: 2
-
-### Solution
-
-Do not trust client side input, even if there is client side validation in place.
-In general, type check all data on the server side.
-If the application uses JDBC, use PreparedStatement or CallableStatement, with parameters passed by '?'
-If the application uses ASP, use ADO Command Objects with strong type checking and parameterized queries.
-If database Stored Procedures can be used, use them.
-Do *not* concatenate strings into queries in the stored procedure, or use 'exec', 'exec immediate', or equivalent functionality!
-Do not create dynamic SQL queries using simple string concatenation.
-Escape all data received from the client.
-Apply an 'allow list' of allowed characters, or a 'deny list' of disallowed characters in user input.
-Apply the principle of least privilege by using the least privileged database user possible.
-In particular, avoid using the 'sa' or 'db-owner' database users. This does not eliminate SQL injection, but minimizes its impact.
-Grant the minimum database access that is necessary for the application.
-
-### Reference
-
-
-* [ https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html ](https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html)
-
-
-#### CWE Id: [ 89 ](https://cwe.mitre.org/data/definitions/89.html)
-
-
-#### WASC Id: 19
 
 #### Source ID: 1
 
