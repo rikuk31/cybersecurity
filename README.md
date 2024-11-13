@@ -22,7 +22,6 @@ Cybersecurity and data privacy course
 
 Booking System Phase 1 improvements:
 app.js:
-
-Input Validation: Added a helper function to validate the username using a regular expression.
-Prepared Statement: The code now uses a placeholder for username in the query string.
-Parameterized Query: The actual username is passed as a separate argument during query execution, preventing SQL injection vulnerabilities.
+Input Validation: Added a helper function to validate the username using a regular expression.<br>
+Prepared Statement: The code now uses a placeholder for username in the query string.<br>
+Parameterized Query: The actual username is passed as a separate argument during query execution, preventing SQL injection vulnerabilities.<br>
